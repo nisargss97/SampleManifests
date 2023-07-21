@@ -1,0 +1,961 @@
+{
+    "value": {
+        "appDefinitions": [
+            {
+                "manifestVersion": "1.12",
+                "id": "c92c289e-ceb4-4755-819d-0d1dffdab6fa",
+                "version": "1.0.9",
+                "name": "Viva Sales",
+                "accentColor": "#FFFFFF",
+                "publishingPolicy": {
+                    "isFlaggedForViolations": true
+                },
+                "authorization": {
+                    "permissions": {
+                        "resourceSpecific": [
+                            {
+                                "name": "OnlineMeeting.ReadBasic.Chat",
+                                "type": "Application"
+                            },
+                            {
+                                "name": "OnlineMeetingTranscript.Read.Chat",
+                                "type": "Application"
+                            },
+                            {
+                                "name": "ChatMessage.Read.Chat",
+                                "type": "Application"
+                            },
+                            {
+                                "name": "TeamsTab.Read.Chat",
+                                "type": "Application"
+                            },
+                            {
+                                "name": "ChatMember.Read.Chat",
+                                "type": "Application"
+                            }
+                        ]
+                    }
+                },
+                "bots": [
+                    {
+                        "commandLists": [
+                            {
+                                "commands": [
+                                    {
+                                        "description": "Search for Viva Sales records to share",
+                                        "title": "Help"
+                                    }
+                                ],
+                                "scopes": [
+                                    "team",
+                                    "groupchat"
+                                ]
+                            }
+                        ],
+                        "id": "bb7dc610-6d2a-4ad2-8a9f-f56280ced4e4",
+                        "scopes": [
+                            "team",
+                            "groupchat"
+                        ]
+                    }
+                ],
+                "categories": [
+                    "Communication",
+                    "Productivity",
+                    "SalesAndMarketing"
+                ],
+                "developerName": "Microsoft Corporation",
+                "developerUrl": "https://www.microsoft.com/en-us/microsoft-viva",
+                "galleryTabs": [
+                    {
+                        "canUpdateConfiguration": false,
+                        "configurationUrl": "https://msteamstabintegration.dynamics.com/Home/Bootstrapper#pageType=viva-team-setting",
+                        "context": [
+                            "meetingChatTab",
+                            "meetingDetailsTab",
+                            "meetingSidePanel"
+                        ],
+                        "scopes": [
+                            "groupchat"
+                        ]
+                    }
+                ],
+                "industries": [
+                    "Other"
+                ],
+                "inputExtensions": [
+                    {
+                        "botId": "bb7dc610-6d2a-4ad2-8a9f-f56280ced4e4",
+                        "canUpdateConfiguration": false,
+                        "supportsConversationalAI": true,
+                        "lLMDescription": "Are you serious",
+                        "type": "apiSpecification",
+                        "commands": [
+                            {
+                                "context": [
+                                    "compose"
+                                ],
+                                "id": "AllRecordsSearch",
+                                "initialRun": true,
+                                "parameters": [
+                                    {
+                                        "description": "Search for any record",
+                                        "name": "AllRecordsSearch.param",
+                                        "title": "All Records param"
+                                    }
+                                ],
+                                "title": "All"
+                            },
+                            {
+                                "context": [
+                                    "compose"
+                                ],
+                                "id": "OpptyRecordsSearch",
+                                "initialRun": true,
+                                "parameters": [
+                                    {
+                                        "description": "Search for opportunities",
+                                        "name": "OpptyRecordsSearch.param",
+                                        "title": "Opportunity Records param"
+                                    }
+                                ],
+                                "title": "Opportunities"
+                            },
+                            {
+                                "context": [
+                                    "compose"
+                                ],
+                                "id": "AccountRecordsSearch",
+                                "initialRun": true,
+                                "parameters": [
+                                    {
+                                        "description": "Search for accounts",
+                                        "name": "AccountRecordsSearch.param",
+                                        "title": "Account Records param"
+                                    }
+                                ],
+                                "title": "Accounts"
+                            },
+                            {
+                                "context": [
+                                    "compose"
+                                ],
+                                "id": "ContactRecordsSearch",
+                                "initialRun": true,
+                                "parameters": [
+                                    {
+                                        "description": "Search for contacts",
+                                        "name": "ContactRecordsSearch.param",
+                                        "title": "Contact Records param"
+                                    }
+                                ],
+                                "title": "Contacts"
+                            },
+                            {
+                                "context": [
+                                    "compose"
+                                ],
+                                "description": "Share feedback",
+                                "id": "MEFeedBack",
+                                "taskInfo": {
+                                    "height": "700",
+                                    "url": "https://msteamstabintegration.dynamics.com/Home/OCVCustomerExperienceSurvey#formsProId=&origin=MessagingExtensionsOrigin",
+                                    "width": "700"
+                                },
+                                "title": "Share feedback",
+                                "type": "action"
+                            }
+                        ],
+                        "messageHandlers": [
+                            {
+                                "type": "link",
+                                "value": {
+                                    "domains": [
+                                        "*.salesproductivity.dynamics.com",
+                                        "*.vivasales.dynamics.com"
+                                    ]
+                                }
+                            }
+                        ],
+                        "scopes": [
+                            "team",
+                            "personal"
+                        ]
+                    }
+                ],
+                "isAppIOSAcquirable": true,
+                "isBlockable": true,
+                "isTeamsOwned": true,
+                "isTenantConfigurable": true,
+                "languageTag": "en-US",
+                "largeImageUrl": "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/c92c289e-ceb4-4755-819d-0d1dffdab6fa_largeImage.png?v=1.0.9",
+                "lastUpdatedAt": "2023-04-03T21:26:11.1648437Z",
+                "longDescription": "What if you could update your CRM while staying productive using the power of Microsoft 365 applications? \n\nMicrosoft Viva Sales is a seller experience application that enables sellers to use Microsoft 365 and Microsoft Teams to automatically capture customer engagement data. As sellers are working in their productivity applications, they can get actionable insights about their customers and enrich a customer record with all the relevant customer activity data that can easily be shared with team members in the flow of work without going into the CRM. Viva Sales brings everything sellers need to engage with customers right inside the solutions they use every day while eliminating manual data entry and keeping CRM systems such as Dynamics 365 Sales and Salesforce® CRM up to date with automatic write back of key customer information. \n\nViva Sales helps fulfil the seller wish list and automates CRM updates, tracks customer sentiment, and even generates AI driven call summaries. Say goodbye to manual meeting notes! Help your sellers do what they do best and build deeper customer relationships and close deals.  Enable sellers to sell their way! \n\nThis application requires additional setup in Viva Sales for Microsoft Outlook as a prerequisite. By using this app, you allow it to read online meeting artifacts on behalf of the signed-in user. \n\nA Microsoft 365 Global Administrator is required to install and set up Viva Sales. \n\nViva Sales may be subject to an additional free or paid license. For more details, please access the Viva Sales website or contact your Microsoft representative.",
+                "officeAssetId": "WA200004460",
+                "permissions": [
+                    "Identity",
+                    "MessageTeamMembers"
+                ],
+                "privacyUrl": "https://go.microsoft.com/fwlink/?linkid=521839",
+                "publisherType": "SecondParty",
+                "screenshotUrls": [
+                    "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/screenshots/c92c289e-ceb4-4755-819d-0d1dffdab6fa/1.png?v=1.0.9",
+                    "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/screenshots/c92c289e-ceb4-4755-819d-0d1dffdab6fa/2.png?v=1.0.9",
+                    "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/screenshots/c92c289e-ceb4-4755-819d-0d1dffdab6fa/3.png?v=1.0.9",
+                    "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/screenshots/c92c289e-ceb4-4755-819d-0d1dffdab6fa/4.png?v=1.0.9",
+                    "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/screenshots/c92c289e-ceb4-4755-819d-0d1dffdab6fa/5.png?v=1.0.9"
+                ],
+                "shortDescription": "Microsoft Viva Sales automates data entry and brings AI to sellers.",
+                "smallImageUrl": "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/c92c289e-ceb4-4755-819d-0d1dffdab6fa_smallImage.png?v=1.0.9",
+                "staticTabs": [
+                    {
+                        "contentUrl": "https://msteamstabintegration.dynamics.com/wwwroot/static/home.html",
+                        "entityId": "homeTab",
+                        "name": "Viva Sales",
+                        "context": [
+                            "meetingChatTab",
+                            "meetingDetailsTab",
+                            "meetingSidePanel"
+                        ],
+                        "scopes": [
+                            "personal",
+                            "groupchat"
+                        ]
+                    }
+                ],
+                "termsOfUseUrl": "https://go.microsoft.com/fwlink/?linkid=2182773",
+                "validDomains": [
+                    "msteamstabintegration.dynamics.com",
+                    "go.microsoft.com",
+                    "token.botframework.com",
+                    "msteamstabintegration.crm.dynamics.com"
+                ],
+                "webApplicationInfo": {
+                    "id": "44a02aaa-7145-4925-9dcd-79e6e1b94eff",
+                    "resource": "api://msteamstabintegration.dynamics.com/botid-bb7dc610-6d2a-4ad2-8a9f-f56280ced4e4"
+                }
+            },
+            {
+                "manifestVersion": "m365devpreview",
+                "id": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
+                "version": "0.1.1",
+                "name": "Test Tab Ordering",
+                "accentColor": "#ff6a00",
+                "authorization": {
+                    "permissions": {
+                        "orgWide": [],
+                        "resourceSpecific": [
+                            {
+                                "name": "OnlineMeeting.ReadBasic.Chat",
+                                "type": "Delegated"
+                            },
+                            {
+                                "name": "MeetingStage.Write.Chat",
+                                "type": "Delegated"
+                            },
+                            {
+                                "name": "OnlineMeetingParticipant.Read.Chat",
+                                "type": "Delegated"
+                            },
+                            {
+                                "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+                                "type": "Delegated"
+                            },
+                            {
+                                "name": "ChannelMeetingStage.Write.Group",
+                                "type": "Delegated"
+                            },
+                            {
+                                "name": "ChannelMeeting.ReadBasic.Group",
+                                "type": "Delegated"
+                            }
+                        ]
+                    }
+                },
+                "bots": [
+                    {
+                        "commandLists": [
+                            {
+                                "commands": [
+                                    {
+                                        "description": "hi",
+                                        "title": "hello"
+                                    }
+                                ],
+                                "scopes": [
+                                    "personal"
+                                ]
+                            },
+                            {
+                                "commands": [
+                                    {
+                                        "description": "hi",
+                                        "title": "hello"
+                                    }
+                                ],
+                                "scopes": [
+                                    "groupChat"
+                                ]
+                            },
+                            {
+                                "commands": [
+                                    {
+                                        "description": "hi",
+                                        "title": "hello"
+                                    }
+                                ],
+                                "scopes": [
+                                    "team"
+                                ]
+                            }
+                        ],
+                        "id": "4de42b49-cefc-4874-b914-6de8d7c9482b",
+                        "isNotificationOnly": true,
+                        "scopes": [
+                            "personal",
+                            "team",
+                            "groupChat"
+                        ],
+                        "supportsCalling": false,
+                        "supportsFiles": false,
+                        "supportsVideo": false
+                    }
+                ],
+                "categories": [
+                    "Microsoft",
+                    "Education"
+                ],
+                "developerName": "Microsoft Corporation",
+                "developerUrl": "https://teams-todolist.azurewebsites.net",
+                "galleryTabs": [
+                    {
+                        "canUpdateConfiguration": false,
+                        "configurationUrl": "https://teams-test-tab.azurewebsites.net",
+                        "context": [
+                            "personalTab",
+                            "privateChatTab",
+                            "channelTab",
+                            "meetingChatTab",
+                            "meetingDetailsTab",
+                            "meetingSidePanel",
+                            "meetingStage"
+                        ],
+                        "scopes": [
+                            "team",
+                            "groupChat"
+                        ]
+                    }
+                ],
+                "inputExtensions": [
+                    {
+                        "botId": "4de42b49-cefc-4874-b914-6de8d7c9482b",
+                        "canUpdateConfiguration": true,
+                        "commands": [
+                            {
+                                "context": [
+                                    "commandBox",
+                                    "compose"
+                                ],
+                                "description": "Test command to run query",
+                                "fetchTask": false,
+                                "id": "searchQuery",
+                                "initialRun": true,
+                                "parameters": [
+                                    {
+                                        "description": "Test search query",
+                                        "inputType": "text",
+                                        "name": "searchQuery",
+                                        "title": "Search Query",
+                                        "value": ""
+                                    }
+                                ],
+                                "title": "Search",
+                                "type": "query"
+                            }
+                        ],
+                        "fetchCommands": false,
+                        "messageHandlers": [
+                            {
+                                "type": "link",
+                                "value": {
+                                    "domains": [
+                                        "teams-test-tab.azurewebsites.net"
+                                    ],
+                                    "supportsAnonymousAccess": false
+                                }
+                            }
+                        ],
+                        "scopes": [
+                            "team",
+                            "groupChat",
+                            "personal"
+                        ]
+                    }
+                ],
+                "isAppIOSAcquirable": true,
+                "isBlockable": true,
+                "isCoreApp": false,
+                "isFullScreen": false,
+                "isFullTrust": false,
+                "isPinnable": false,
+                "isPreinstallable": false,
+                "isTeamsOwned": true,
+                "isTenantConfigurable": true,
+                "languageTag": "en-us",
+                "largeImageUrl": "https://statics.teams.cdn.office.net/evergreen-assets/apps/2c19df50-1c3c-11ea-9327-cd28e4b6f7ba_largeImage.png?v=0.1.1",
+                "longDescription": "No really, test them tabs.",
+                "meetingExtensionDefinition": {
+                    "scenes": []
+                },
+                "permissions": [
+                    "Identity",
+                    "MessageTeamMembers"
+                ],
+                "privacyUrl": "https://teams-todolist.azurewebsites.net/privacy",
+                "publisherType": "FirstParty",
+                "shortDescription": "Test tabs.",
+                "showLoadingIndicator": true,
+                "smallImageUrl": "https://statics.teams.cdn.office.net/evergreen-assets/apps/2c19df50-1c3c-11ea-9327-cd28e4b6f7ba_smallImage.png?v=0.1.1",
+                "staticTabs": [
+                    {
+                        "contentUrl": "https://teams-test-tab.azurewebsites.net",
+                        "context": [
+                            "personalTab",
+                            "privateChatTab",
+                            "channelTab",
+                            "meetingChatTab",
+                            "meetingDetailsTab",
+                            "meetingSidePanel",
+                            "meetingStage"
+                        ],
+                        "entityId": "test-tab",
+                        "name": "Static - Test tab",
+                        "scopes": [
+                            "personal",
+                            "team",
+                            "groupChat"
+                        ],
+                        "websiteUrl": "https://teams-test-tab.azurewebsites.net"
+                    },
+                    {
+                        "entityId": "conversations",
+                        "scopes": [
+                            "personal"
+                        ]
+                    }
+                ],
+                "subscriptionOffer": {
+                    "offerId": "isvtesttaborder.microsoft_managed_plan"
+                },
+                "termsOfUseUrl": "https://teams-todolist.azurewebsites.net/termsofuse",
+                "thirdPartyNoticesUrl": "",
+                "validDomains": [
+                    "teams-test-tab.azurewebsites.net"
+                ],
+                "videoUrl": "",
+                "supportedLanguages": [
+                    "en-us"
+                ]
+            },
+            {
+                "manifestVersion": "devPreview",
+                "id": "25407c29-8335-48a3-bfdb-4384580a1857",
+                "version": "1.1.4",
+                "name": "Packing List",
+                "accentColor": "#eff9fc",
+                "categories": [
+                    "Lifestyle",
+                    "Microsoft"
+                ],
+                "developerName": "Microsoft Corporation",
+                "developerUrl": "https://www.microsoft.com",
+                "isAppIOSAcquirable": true,
+                "isBlockable": true,
+                "isCoreApp": false,
+                "isFullScreen": false,
+                "isFullTrust": false,
+                "isPinnable": true,
+                "isPreinstallable": true,
+                "isTeamsOwned": true,
+                "isTenantConfigurable": true,
+                "languageTag": "en-us",
+                "largeImageUrl": "https://statics.teams.cdn.office.net/evergreen-assets/apps/25407c29-8335-48a3-bfdb-4384580a1857_largeImage.png?v=1.1.4",
+                "longDescription": "Test app to test static tabs flow",
+                "privacyUrl": "https://packing-list.azurewebsites.net/privacy.html",
+                "publisherType": "FirstParty",
+                "shortDescription": "Packing list app",
+                "showLoadingIndicator": true,
+                "smallImageUrl": "https://statics.teams.cdn.office.net/evergreen-assets/apps/25407c29-8335-48a3-bfdb-4384580a1857_smallImage.png?v=1.1.4",
+                "staticTabs": [
+                    {
+                        "contentUrl": "https://packing-list.azurewebsites.net",
+                        "context": [
+                            "channelTab",
+                            "personalTab",
+                            "meetingSidePanel",
+                            "meetingChatTab",
+                            "meetingStage",
+                            "meetingDetailsTab",
+                            "privateChatTab"
+                        ],
+                        "entityId": "54d496e0-2b51-4210-bf7d-21d0b5821d9c",
+                        "name": "Packing List",
+                        "scopes": [
+                            "personal",
+                            "team",
+                            "groupChat"
+                        ],
+                        "websiteUrl": "https://packing-list.azurewebsites.net"
+                    }
+                ],
+                "termsOfUseUrl": "https://packing-list.azurewebsites.net/tou.html",
+                "thirdPartyNoticesUrl": "",
+                "validDomains": [
+                    "packing-list.azurewebsites.net"
+                ],
+                "videoUrl": "",
+                "webApplicationInfo": {
+                    "id": "25407c29-8335-48a3-bfdb-4384580a1857"
+                },
+                "supportedLanguages": [
+                    "en-us"
+                ]
+            },
+            {
+                "manifestVersion": "1.12",
+                "id": "0e3bedea-4720-48b5-9e13-5a1ce1387d45",
+                "version": "1.1.6",
+                "name": "Polls",
+                "accentColor": "#6264A7",
+                "authorization": {
+                    "permissions": {
+                        "orgWide": [],
+                        "resourceSpecific": []
+                    }
+                },
+                "bots": [
+                    {
+                        "id": "fd931076-bbfb-4a38-a85c-1f0fb5b61bee",
+                        "isNotificationOnly": true,
+                        "scopes": [
+                            "groupchat",
+                            "team"
+                        ],
+                        "supportsCalling": false,
+                        "supportsFiles": false,
+                        "supportsVideo": false
+                    }
+                ],
+                "categories": [
+                    "Productivity",
+                    "Utilities",
+                    "Microsoft"
+                ],
+                "developerName": "Microsoft Corporation",
+                "developerUrl": "https://support.microsoft.com/forms",
+                "galleryTabs": [
+                    {
+                        "canUpdateConfiguration": false,
+                        "configurationUrl": "https://forms.office.com/pages/teamsconfigpage.aspx?lang={locale}&tid={tid}&groupId={groupId}&upn={upn}&teamsTheme={theme}&appid=0e3bedea-4720-48b5-9e13-5a1ce1387d45",
+                        "context": [
+                            "meetingChatTab",
+                            "meetingDetailsTab",
+                            "meetingSidePanel"
+                        ],
+                        "scopes": [
+                            "groupchat",
+                            "team"
+                        ]
+                    }
+                ],
+                "inputExtensions": [
+                    {
+                        "botId": "fd931076-bbfb-4a38-a85c-1f0fb5b61bee",
+                        "canUpdateConfiguration": false,
+                        "commands": [
+                            {
+                                "context": [
+                                    "compose"
+                                ],
+                                "description": "Collect real-time data with Forms poll",
+                                "fetchTask": true,
+                                "id": "collectFormData",
+                                "initialRun": false,
+                                "title": "Create a new poll",
+                                "type": "action"
+                            }
+                        ],
+                        "fetchCommands": false,
+                        "messageHandlers": []
+                    }
+                ],
+                "isAppIOSAcquirable": false,
+                "isBlockable": true,
+                "isCoreApp": false,
+                "isFullScreen": false,
+                "isFullTrust": true,
+                "isPinnable": false,
+                "isPreinstallable": false,
+                "isTeamsOwned": true,
+                "isTenantConfigurable": true,
+                "keywords": [
+                    "forms",
+                    "surveys"
+                ],
+                "languageTag": "en-us",
+                "largeImageUrl": "https://statics.teams.cdn.office.net/evergreen-assets/apps/0e3bedea-4720-48b5-9e13-5a1ce1387d45_largeImage.png?v=1.0.6",
+                "longDescription": "Easily create choice polls, quizzes and word cloud polls before or during your meeting. Collect responses in real-time.",
+                "meetingExtensionDefinition": {
+                    "isAnonymousAccessAllowed": true,
+                    "scenes": []
+                },
+                "privacyUrl": "https://www.microsoft.com/privacy",
+                "publisherType": "FirstParty",
+                "shortDescription": "Easily create polls in your meeting.",
+                "showLoadingIndicator": false,
+                "smallImageUrl": "https://statics.teams.cdn.office.net/evergreen-assets/apps/0e3bedea-4720-48b5-9e13-5a1ce1387d45_smallImage.png?v=1.0.6",
+                "staticTabs": [
+                    {
+                        "contentUrl": "https://teams-test-tab.azurewebsites.net",
+                        "context": [
+                            "personalTab",
+                            "privateChatTab",
+                            "channelTab",
+                            "meetingChatTab",
+                            "meetingDetailsTab",
+                            "meetingSidePanel",
+                            "meetingStage"
+                        ],
+                        "entityId": "test-tab",
+                        "name": "Polls",
+                        "scopes": [
+                            "personal",
+                            "team",
+                            "groupChat"
+                        ],
+                        "websiteUrl": "https://teams-test-tab.azurewebsites.net"
+                    }
+                ],
+                "supportedTenantRegions": [
+                    "GCC"
+                ],
+                "termsOfUseUrl": "https://go.microsoft.com/fwlink/?linkid=2174878",
+                "thirdPartyNoticesUrl": "",
+                "validDomains": [
+                    "forms.office.com",
+                    "login.microsoftonline.com"
+                ],
+                "videoUrl": "",
+                "webApplicationInfo": {
+                    "id": "c9a559d2-7aab-4f13-a6ed-e7e9c52aec87",
+                    "resource": "https://forms.office.com"
+                }
+            },
+            {
+                "manifestVersion": "1.7",
+                "id": "a887d3e9-d9ef-4c46-851e-f7753ef29452",
+                "version": "1.1.2",
+                "name": "AgilePolly",
+                "accentColor": "#A0A4F8",
+                "bots": [
+                    {
+                        "commandLists": [],
+                        "id": "a887d3e9-d9ef-4c46-851e-f7753ef29452",
+                        "isNotificationOnly": true,
+                        "scopes": [
+                            "team",
+                            "personal",
+                            "groupchat"
+                        ],
+                        "supportsFiles": true
+                    }
+                ],
+                "categories": [
+                    "Communication",
+                    "Productivity",
+                    "ProjectManagement"
+                ],
+                "developerName": "Polly",
+                "developerUrl": "https://www.polly.ai",
+                "galleryTabs": [
+                    {
+                        "canUpdateConfiguration": true,
+                        "configurationUrl": "https://teams.polly.ai/agile/content/tabconfig?theme={theme}",
+                        "scopes": [
+                            "team",
+                            "groupchat"
+                        ]
+                    }
+                ],
+                "industries": [
+                    "Other"
+                ],
+                "inputExtensions": [
+                    {
+                        "botId": "a887d3e9-d9ef-4c46-851e-f7753ef29452",
+                        "canUpdateConfiguration": false,
+                        "commands": [
+                            {
+                                "context": [
+                                    "compose"
+                                ],
+                                "description": "Create a new AgilePolly standup",
+                                "fetchTask": true,
+                                "id": "survey/authoring",
+                                "parameters": [
+                                    {
+                                        "description": "",
+                                        "name": "param",
+                                        "title": "param"
+                                    }
+                                ],
+                                "title": "New Standup",
+                                "type": "action"
+                            }
+                        ],
+                        "scopes": [
+                            "team",
+                            "personal"
+                        ]
+                    }
+                ],
+                "keywords": [
+                    "product",
+                    "feedback",
+                    "insights"
+                ],
+                "largeImageUrl": "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/a887d3e9-d9ef-4c46-851e-f7753ef29452_largeImage.png?v=1.1.2",
+                "lastUpdatedAt": "2021-10-28T03:46:16.8300389Z",
+                "longDescription": "AgilePolly automates standups and check-ins while enabling your teams to be more effective and engaged by tracking status updates and detecting team blockers. Daily stand-ups as a commonly used Scrum and Agile product development practice has proven effective in optimizing team collaboration and performance. Using AgilePolly, you can author, deliver, automate and run asynchronous daily status meetings, weekly retrospectives, and one-on-one checkins while staying up-to-date with real-time progress.",
+                "mpnId": "6142723",
+                "officeAssetId": "WA200001410",
+                "permissions": [
+                    "Identity",
+                    "MessageTeamMembers"
+                ],
+                "privacyUrl": "https://www.polly.ai/privacy",
+                "screenshotUrls": [
+                    "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/screenshots/a887d3e9-d9ef-4c46-851e-f7753ef29452/1.png?v=1.1.2",
+                    "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/screenshots/a887d3e9-d9ef-4c46-851e-f7753ef29452/2.png?v=1.1.2",
+                    "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/screenshots/a887d3e9-d9ef-4c46-851e-f7753ef29452/3.png?v=1.1.2",
+                    "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/screenshots/a887d3e9-d9ef-4c46-851e-f7753ef29452/4.png?v=1.1.2"
+                ],
+                "shortDescription": "Automate your daily standups and team check-ins with AgilePolly",
+                "smallImageUrl": "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/a887d3e9-d9ef-4c46-851e-f7753ef29452_smallImage.png?v=1.1.2",
+                "staticTabs": [
+                    {
+                        "contentUrl": "https://teams-test-tab.azurewebsites.net",
+                        "context": [
+                            "personalTab",
+                            "privateChatTab",
+                            "channelTab",
+                            "meetingChatTab",
+                            "meetingDetailsTab",
+                            "meetingSidePanel",
+                            "meetingStage"
+                        ],
+                        "entityId": "test-tab",
+                        "name": "AgilePolly",
+                        "scopes": [
+                            "personal",
+                            "team",
+                            "groupChat"
+                        ],
+                        "websiteUrl": "https://teams-test-tab.azurewebsites.net"
+                    }
+                ],
+                "termsOfUseUrl": "https://www.polly.ai/tos",
+                "validDomains": [
+                    "*.polly.ai"
+                ],
+                "webApplicationInfo": {
+                    "id": "228f3e22-92b5-4c6d-91e8-9dcc1757ad36",
+                    "resource": "api://teams.polly.ai/228f3e22-92b5-4c6d-91e8-9dcc1757ad36"
+                }
+            },
+            {
+                "manifestVersion": "1.9",
+                "id": "1542629c-01b3-4a6d-8f76-1938b779e48d",
+                "version": "2.0.7",
+                "name": "Polly",
+                "accentColor": "#0190F7",
+                "bots": [
+                    {
+                        "commandLists": [
+                            {
+                                "commands": [
+                                    {
+                                        "description": "Start a quick poll",
+                                        "title": "Your question? Option1, Option2"
+                                    }
+                                ],
+                                "scopes": [
+                                    "team",
+                                    "personal",
+                                    "groupchat"
+                                ]
+                            }
+                        ],
+                        "id": "817c2506-de4a-4795-971e-371ea75a03ed",
+                        "isNotificationOnly": false,
+                        "scopes": [
+                            "team",
+                            "personal",
+                            "groupchat"
+                        ],
+                        "supportsFiles": true
+                    }
+                ],
+                "categories": [
+                    "Communication",
+                    "Productivity",
+                    "ProjectManagement"
+                ],
+                "defaultGroupCapability": {
+                    "groupchat": "tab",
+                    "meetings": "tab",
+                    "team": "tab"
+                },
+                "defaultInstallScope": "team",
+                "developerName": "Polly",
+                "developerUrl": "https://www.polly.ai",
+                "galleryTabs": [
+                    {
+                        "canUpdateConfiguration": true,
+                        "configurationUrl": "https://teams.polly.ai/msteams/content/tabconfig?theme={theme}",
+                        "context": [
+                            "channelTab",
+                            "privateChatTab",
+                            "meetingChatTab",
+                            "meetingDetailsTab",
+                            "meetingSidePanel"
+                        ],
+                        "scopes": [
+                            "team",
+                            "groupchat"
+                        ]
+                    }
+                ],
+                "industries": [
+                    "Other"
+                ],
+                "inputExtensions": [
+                    {
+                        "botId": "817c2506-de4a-4795-971e-371ea75a03ed",
+                        "canUpdateConfiguration": false,
+                        "commands": [
+                            {
+                                "context": [
+                                    "compose"
+                                ],
+                                "description": "Customized to your needs",
+                                "fetchTask": true,
+                                "id": "survey/authoring",
+                                "parameters": [
+                                    {
+                                        "description": "",
+                                        "name": "param",
+                                        "title": "param"
+                                    }
+                                ],
+                                "taskInfo": {
+                                    "height": "large",
+                                    "width": "700"
+                                },
+                                "title": "Create a new polly",
+                                "type": "action"
+                            },
+                            {
+                                "context": [
+                                    "message"
+                                ],
+                                "description": "Create a polly from this message",
+                                "fetchTask": true,
+                                "id": "messageAction",
+                                "parameters": [
+                                    {
+                                        "description": "",
+                                        "name": "param",
+                                        "title": "param"
+                                    }
+                                ],
+                                "title": "Create a Polly",
+                                "type": "action"
+                            }
+                        ],
+                        "messageHandlers": [
+                            {
+                                "type": "link",
+                                "value": {
+                                    "domains": [
+                                        "teams.polly.ai"
+                                    ]
+                                }
+                            }
+                        ],
+                        "scopes": [
+                            "team",
+                            "personal"
+                        ]
+                    }
+                ],
+                "keywords": [
+                    "survey",
+                    "poll",
+                    "quiz"
+                ],
+                "largeImageUrl": "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/1542629c-01b3-4a6d-8f76-1938b779e48d_largeImage.png?v=2.0.6",
+                "lastUpdatedAt": "2021-12-01T05:04:46.0755854Z",
+                "longDescription": "Polly is an engagement app that captures instant, contextual feedback from your team in seconds. Just about anyone can get started with Polly to quickly reach their colleagues and make data-driven decisions instantly.\r\nYou can use Polly to get meeting feedback, quiz your students, get a pulse on how your team is feeling, and so much more. Polly offers an array of advanced functionality such as templates, recurrence, scheduling, anonymity, and more all available to you in Microsoft Teams.\r\nTo get started, add Polly to a Team of your choice, and you can start creating your first polly by using the messaging extension or pinning Polly to the Team tab.\r\nFor Teams Meetings, just add Polly to the Meeting tab to start creating your polly ahead of when your meeting is scheduled, and you can send your polly on demand directly in the meeting to your attendees.\r\nAll of your results will live in your Polly tab that's pinned to the Team and you can share, delete, or close as needed. Not sure what types of questions to ask? We have 30+ templates available for you to use at any time if you need a bit of inspiration.",
+                "mpnId": "6142723",
+                "officeAssetId": "WA104381060",
+                "permissions": [
+                    "Identity",
+                    "MessageTeamMembers"
+                ],
+                "privacyUrl": "https://www.polly.ai/privacy",
+                "screenshotUrls": [
+                    "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/screenshots/1542629c-01b3-4a6d-8f76-1938b779e48d/1.png?v=2.0.6",
+                    "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/screenshots/1542629c-01b3-4a6d-8f76-1938b779e48d/2.png?v=2.0.6",
+                    "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/screenshots/1542629c-01b3-4a6d-8f76-1938b779e48d/3.png?v=2.0.6"
+                ],
+                "securityComplianceInfo": {
+                    "status": "unattested"
+                },
+                "shortDescription": "Ask your team questions with Polly and get instant answers in Microsoft Teams",
+                "smallImageUrl": "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/1542629c-01b3-4a6d-8f76-1938b779e48d_smallImage.png?v=2.0.6",
+                "staticTabs": [
+                    {
+                        "contentUrl": "https://teams-test-tab.azurewebsites.net",
+                        "context": [
+                            "personalTab",
+                            "privateChatTab",
+                            "channelTab",
+                            "meetingChatTab",
+                            "meetingDetailsTab",
+                            "meetingSidePanel",
+                            "meetingStage"
+                        ],
+                        "entityId": "test-tab",
+                        "name": "OriginalPolly",
+                        "scopes": [
+                            "personal",
+                            "team",
+                            "groupChat"
+                        ],
+                        "websiteUrl": "https://teams-test-tab.azurewebsites.net"
+                    }
+                ],
+                "termsOfUseUrl": "https://www.polly.ai/tos",
+                "validDomains": [
+                    "*.polly.ai"
+                ],
+                "videoUrl": "https://www.youtube.com/watch?v=7PK05mlvKTg",
+                "webApplicationInfo": {
+                    "id": "228f3e22-92b5-4c6d-91e8-9dcc1757ad36",
+                    "resource": "api://teams.polly.ai/228f3e22-92b5-4c6d-91e8-9dcc1757ad36"
+                }
+            }
+        ]
+    }
+}
