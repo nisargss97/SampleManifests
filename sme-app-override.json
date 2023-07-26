@@ -88,9 +88,8 @@
                         "botId": "bb7dc610-6d2a-4ad2-8a9f-f56280ced4e4",
                         "canUpdateConfiguration": false,
                         "supportsConversationalAI": true,
-                        "lLMDescription": "Are you serious",
-                        "type": "apiSpecification",
-                        "apiSpecificationFile": "xyz.yaml",
+                        "type": "apiBased",
+                        "apiSpecFile": "xyz.yaml",
                         "commands": [
                             {
                                 "context": [
@@ -106,7 +105,7 @@
                                     }
                                 ],
                                 "title": "All",
-                                "apiResponseTemplate": "api response.json"
+                                "apiResponseRenderingTemplate": "api response.json"
                             },
                             {
                                 "context": [
@@ -350,7 +349,7 @@
                 ],
                 "inputExtensions": [
                     {
-                        "type": "Bot",
+                        "type": "BotBased",
                         "botId": "4de42b49-cefc-4874-b914-6de8d7c9482b",
                         "canUpdateConfiguration": true,
                         "commands": [
@@ -575,7 +574,7 @@
                     {
                         "botId": "fd931076-bbfb-4a38-a85c-1f0fb5b61bee",
                         "canUpdateConfiguration": false,
-                        "apiSpecificationFile": "xyz.yaml",
+                        "apiSpecFile": "xyz.yaml",
                         "commands": [
                             {
                                 "context": [
@@ -698,6 +697,7 @@
                     {
                         "botId": "a887d3e9-d9ef-4c46-851e-f7753ef29452",
                         "canUpdateConfiguration": false,
+                        "supportsConversationalAI": false,
                         "commands": [
                             {
                                 "context": [
@@ -715,7 +715,7 @@
                                 ],
                                 "title": "New Standup",
                                 "type": "action",
-                                "apiResponseTemplate": "api response.json"
+                                "apiResponseRenderingTemplate": "api response.json"
                             }
                         ],
                         "scopes": [
