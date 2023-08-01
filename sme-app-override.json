@@ -89,7 +89,7 @@
                         "canUpdateConfiguration": false,
                         "supportsConversationalAI": true,
                         "type": "apiBased",
-                        "apiSpecFile": "xyz.yaml",
+                        "apiSpecificationFile": "xyz.yaml",
                         "commands": [
                             {
                                 "context": [
@@ -349,7 +349,7 @@
                 ],
                 "inputExtensions": [
                     {
-                        "type": "BotBased",
+                        "type": "botBased",
                         "botId": "4de42b49-cefc-4874-b914-6de8d7c9482b",
                         "canUpdateConfiguration": true,
                         "commands": [
@@ -574,7 +574,7 @@
                     {
                         "botId": "fd931076-bbfb-4a38-a85c-1f0fb5b61bee",
                         "canUpdateConfiguration": false,
-                        "apiSpecFile": "xyz.yaml",
+                        "apiSpecificationFile": "xyz.yaml",
                         "commands": [
                             {
                                 "context": [
