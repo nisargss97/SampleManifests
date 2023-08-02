@@ -88,7 +88,7 @@
                         "botId": "bb7dc610-6d2a-4ad2-8a9f-f56280ced4e4",
                         "canUpdateConfiguration": false,
                         "type": "apiBased",
-                        "apiSpecificationFile": "xyz.yaml",
+                        "apiSpecificationFileUrl": "xyz.yaml",
                         "commands": [
                             {
                                 "context": [
@@ -104,7 +104,7 @@
                                     }
                                 ],
                                 "title": "All",
-                                "apiResponseRenderingTemplate": "api response.json"
+                                "apiResponseRenderingTemplateFileUrl": "api response.json"
                             },
                             {
                                 "context": [
@@ -573,7 +573,7 @@
                     {
                         "botId": "fd931076-bbfb-4a38-a85c-1f0fb5b61bee",
                         "canUpdateConfiguration": false,
-                        "apiSpecificationFile": "xyz.yaml",
+                        "apiSpecificationFileUrl": "xyz.yaml",
                         "commands": [
                             {
                                 "context": [
@@ -713,7 +713,7 @@
                                 ],
                                 "title": "New Standup",
                                 "type": "action",
-                                "apiResponseRenderingTemplate": "api response.json"
+                                "apiResponseRenderingTemplateFileUrl": "api response.json"
                             }
                         ],
                         "scopes": [
