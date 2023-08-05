@@ -1,0 +1,85 @@
+openapi: 3.0.0
+info:
+  title: Sample Service
+  description: A simple service to manage samples for various items
+  version: 1.0.0
+servers:
+  - url: https://samples-api-2023.azurewebsites.net/
+paths:
+  /samples:
+    get:
+      operationId: listSamples
+      summary: List all samples
+      description: Returns a list of samples with their details and images
+      parameters:
+        - name: assignedTo
+          in: query
+          description: Filter samples by who they're assigned to
+          schema:
+            type: string
+          required: false
+      responses:
+        '200':
+          description: A successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      description: The unique identifier of the sample
+                    title:
+                      type: string
+                      description: The short summary of the sample
+                    description:
+                      type: string
+                      description: The detailed description of the sample
+                    assignedTo:
+                      type: string
+                      description: The user who is responsible for the sample
+                    date:
+                      type: string
+                      format: date-time
+                      description: The date and time when the sample is scheduled or completed
+                    image:
+                      type: string
+                      format: uri
+                      description: The URL of the image of the item to be sampleed or the sample process
+    post:
+      operationId: createsample
+      summary: Create a new sample
+      description: Adds a new sample to the list with the given details and image URL
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: The short summary of the sample
+                description:
+                  type: string
+                  description: The detailed description of the sample
+                assignedTo:
+                  type: string
+                  description: The user who is responsible for the sample
+                date:
+                  type: string
+                  format: date-time
+                  description: The optional date and time when the sample is scheduled or completed
+                image:
+                  type: string
+                  format: uri
+                  description: The URL of the image of the item to be sampleed or the sample process
+              required:
+                - title
+                - description
+                - assignedTo
+      responses:
+        '201':
+          description: A successful response indicating that the sample was created
