@@ -104,7 +104,7 @@
                                     }
                                 ],
                                 "title": "All",
-                                "apiResponseRenderingTemplateFileUrl": "api response.json"
+                                "apiResponseRenderingTemplateFileUrl": "https://raw.githubusercontent.com/nisargss97/SampleManifests/main/sample-response-template.json"
                             },
                             {
                                 "context": [
@@ -713,7 +713,7 @@
                                 ],
                                 "title": "New Standup",
                                 "type": "action",
-                                "apiResponseRenderingTemplateFileUrl": "api response.json"
+                                "apiResponseRenderingTemplateFileUrl": "https://raw.githubusercontent.com/nisargss97/SampleManifests/main/sample-response-template.json"
                             }
                         ],
                         "scopes": [
