@@ -1,0 +1,103 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Example API",
+        "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://smba-mock-proxy.cloudapp.net:465/api/mt/cd/int/"
+      }
+    ],
+    "paths": {
+        "/foo": {
+          "get": {
+            "summary": "Get foo by id",
+            "operationId": "",
+            "parameters": [],
+            "responses": {
+              "200": {
+                "description": "Success",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/drafts"
+                    }
+                  }
+                }
+              },
+              "400": {
+                "description": "Bad Request"
+              },
+              "404": {
+                "description": "Not Found"
+              }
+            }
+          }
+        }
+    },
+    "components": {
+        "schemas": {
+            "input": {
+                "required": [
+                    "name"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "age": {
+                        "type": "integer",
+                        "default": 100
+                    },
+                    "active": {
+                        "type": "boolean"
+                    },
+                    "address": {
+                        "type": "object",
+                        "required": [
+                            "city"
+                        ],
+                        "properties": {
+                            "street": {
+                                "type": "string"
+                            },
+                            "city": {
+                                "type": "string"
+                            },
+                            "zip": {
+                                "type": "string",
+                                "default": "12345"
+                            }
+                        }
+                    }
+                }
+            },
+            "drafts": {
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "version": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "defaultVersion": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "botId": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "createdDateTime": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    }
+}
