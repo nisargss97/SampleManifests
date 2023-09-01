@@ -88,7 +88,7 @@
                         "botId": "bb7dc610-6d2a-4ad2-8a9f-f56280ced4e4",
                         "canUpdateConfiguration": false,
                         "type": "apiBased",
-                        "apiSpecificationFileUrl": "https://raw.githubusercontent.com/nisargss97/SampleManifests/main/sample-api-spec.yaml",
+                        "apiSpecificationFileUrl": "https://raw.githubusercontent.com/nisargss97/SampleManifests/main/sample-api-spec.json",
                         "commands": [
                             {
                                 "context": [
