@@ -89,6 +89,12 @@
                         "canUpdateConfiguration": false,
                         "type": "apiBased",
                         "apiSpecificationFileUrl": "https://raw.githubusercontent.com/nisargss97/SampleManifests/main/sample-api-spec.json",
+                        "authorization": {
+                            "authType": "serviceAuth",
+                            "serviceAuthConfiguration": {
+                                "apiSecretReferenceId": "ApiSecretRef1"
+                            }
+                        }
                         "commands": [
                             {
                                 "context": [
@@ -350,6 +356,12 @@
                     {
                         "type": "botBased",
                         "botId": "4de42b49-cefc-4874-b914-6de8d7c9482b",
+                        "authorization": {
+                            "authType": "microsoftEntra",
+                            "microsoftEntraConfiguration": {
+                                "supportsSingleSignOn": true
+                            }
+                        }
                         "canUpdateConfiguration": true,
                         "commands": [
                             {
