@@ -94,7 +94,7 @@
                             "serviceAuthConfiguration": {
                                 "apiSecretReferenceId": "ApiSecretRef1"
                             }
-                        }
+                        },
                         "commands": [
                             {
                                 "context": [
@@ -361,7 +361,7 @@
                             "microsoftEntraConfiguration": {
                                 "supportsSingleSignOn": true
                             }
-                        }
+                        },
                         "canUpdateConfiguration": true,
                         "commands": [
                             {
