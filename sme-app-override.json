@@ -110,7 +110,8 @@
                                     }
                                 ],
                                 "title": "All",
-                                "apiResponseRenderingTemplateFileUrl": "https://raw.githubusercontent.com/nisargss97/SampleManifests/main/sample-response-template.json"
+                                "apiResponseRenderingTemplateFileUrl": "https://raw.githubusercontent.com/nisargss97/SampleManifests/main/sample-response-template.json",
+                                "semanticDescription": "Hi LLM Command"
                             },
                             {
                                 "context": [
@@ -122,7 +123,8 @@
                                     {
                                         "description": "Search for opportunities",
                                         "name": "OpptyRecordsSearch.param",
-                                        "title": "Opportunity Records param"
+                                        "title": "Opportunity Records param",
+                                        "semanticDescription": "Hi LLM Parameter"
                                     }
                                 ],
                                 "title": "Opportunities"
@@ -239,6 +241,9 @@
                 "webApplicationInfo": {
                     "id": "44a02aaa-7145-4925-9dcd-79e6e1b94eff",
                     "resource": "api://msteamstabintegration.dynamics.com/botid-bb7dc610-6d2a-4ad2-8a9f-f56280ced4e4"
+                },
+                "intuneInfo": {
+                    "supportedMobileAppManagementVersion": "1.0"
                 }
             },
             {
