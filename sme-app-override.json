@@ -90,9 +90,9 @@
                         "type": "apiBased",
                         "apiSpecificationFileUrl": "https://raw.githubusercontent.com/nisargss97/SampleManifests/main/sample-api-spec.json",
                         "authorization": {
-                            "authType": "serviceAuth",
-                            "serviceAuthConfiguration": {
-                                "apiSecretReferenceId": "ApiSecretRef1"
+                            "authType": "apiSecretServiceAuth",
+                            "apiSecretServiceAuthConfiguration": {
+                                "apiSecretRegistrationId": "ApiSecretRef1"
                             }
                         },
                         "commands": [
