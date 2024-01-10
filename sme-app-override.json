@@ -2,6 +2,546 @@
     "value": {
         "appDefinitions": [
             {
+              "id": "bcd7ba7a-122b-43f1-b2ee-264c7d75c13c",
+              "developerName": "Contoso",
+              "developerUrl": "https://www.microsoft.com",
+              "termsOfUseUrl": "https://www.microsoft.com",
+              "privacyUrl": "https://www.microsoft.com",
+              "version": "1.5",
+              "manifestVersion": "1.5",
+              "scope": "Personal",
+              "mpnId": "4952726",
+              "name": "Contoso Talent App",
+              "shortDescription": "Talent app for Contoso managers and recruiters",
+              "longDescription": "This sample Recruiting and Talent app showcases many of the capabilities Microsoft Teams supports.  App content is hosted for illustrative purposes only.",
+              "smallImageUrl": "/icons/Contoso_smallImage.png",
+              "largeImageUrl": "/icons/Contoso_largeImage.png",
+              "accentColor": "#020081",
+              "bots": [
+                {
+                  "id": "bcd7ba7a-122b-43f1-b2ee-264c7d75c13c",
+                  "isNotificationOnly": false,
+                  "requireGroupSecurity": true,
+                  "scopes": [ "Team", "GroupChat" ],
+                  "commandLists": [
+                    {
+                      "scopes": [ "Team", "Personal" ],
+                      "commands": [
+                        {
+                          "title": "help",
+                          "description": "Find out what I can do"
+                        },
+                        {
+                          "title": "candidate details",
+                          "description": "Get information about a specific candidate by name"
+                        },
+                        {
+                          "title": "new job posting",
+                          "description": "Create a new job posting"
+                        },
+                        {
+                          "title": "top candidates",
+                          "description": "List the top candidates for a given position ID"
+                        },
+                        {
+                          "title": "schedule interview",
+                          "description": "Schedule an interview given the candidate name and position ID"
+                        },
+                        {
+                          "title": "open positions",
+                          "description": "Look up open positions within your organization"
+                        }
+                      ]
+                    }
+                  ],
+                  "configuration": {
+                    "groupChat": {
+                      "fetchTask": true
+                    },
+                    "team": {
+                      "fetchTask": false,
+                      "taskInfo": {
+                        "title": "Contoso Talent App",
+                        "height": "600",
+                        "width": "400",
+                        "url": "https://teamstalentmgmtappv3.azurewebsites.net/teamsapp/index.html"
+                      }
+                    }
+                  }
+                }
+              ],
+              "connectors": [
+                {
+                  "connectorId": "f671aa34-8f5b-4540-9d85-e4ea97fccddb",
+                  "scopes": [
+                    "Team"
+                  ]
+                }
+              ],
+              "inputExtensions": [
+                {
+                  "botId": "bcd7ba7a-122b-43f1-b2ee-264c7d75c13c",
+                  "canUpdateConfiguration": false,
+                  "scopes": [
+                    "Personal",
+                    "Team"
+                  ],
+                  "fetchCommands": true,
+                  "commands": [
+                    {
+                      "id": "searchPositions",
+                      "title": "Positions",
+                      "initialRun": true,
+                      "description": "Search positions by keyword",
+                      "parameters": [
+                        {
+                          "name": "searchText",
+                          "title": "Keywords",
+                          "description": "Search by keyword"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "searchCandidates",
+                      "title": "Candidates",
+                      "initialRun": true,
+                      "description": "Search candidates by name",
+                      "parameters": [
+                        {
+                          "name": "searchText",
+                          "title": "Name",
+                          "description": "Search by name"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "openNewPosition",
+                      "title": "Create position",
+                      "description": "Open a new position",
+                      "fetchTask": true,
+                      "parameters": [
+                        {
+                          "name": "empty",
+                          "title": "empty"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "scopeConstraints": {
+                "teams": [
+                  { "id": "19:teamsCBrLR9lz0vyGz0yeLtv9e-b0z0fNm123abcdm01@thread.tacv2" }
+                ],
+                "groupChats": [
+                  { "id": "19%groupChats91bb4a32a4fb966469935e21%40thread.v2" }
+                ]
+              },
+              "permissions": [
+                "Identity",
+                "MessageTeamMembers"
+              ],
+              "validDomains": [
+                "token.botframework.com",
+                "teamstalentmgmtappv3.azurewebsites.net",
+                "*.ngrok.io",
+                "*.azurewebsites.net"
+              ],
+              "supportedChannelTypes": [
+                "SharedChannels",
+                "PrivateChannels"
+              ],
+              "activities": {
+                "activityTypes": [
+                  {
+                    "type": "taskCreated",
+                    "description": "Task Created Activity",
+                    "templateText": "{actor} created task {taskId} for you"
+                  }
+                ]
+              },
+              "webApplicationInfo": {
+                "id": "db5c3ee6-4180-4b81-b080-a3ce61e16b66",
+                "applicationPermissions": [
+                  "Channel.Delete.Group",
+                  "ChannelMessage.Read.Group",
+                  "TeamsApp.Read.Group"
+                ]
+              },
+              "meetingExtensionDefinition": {
+                "filters": [
+                  {
+                    "id": "d91ec8d6-8d1e-409b-b40b-4b4244397605",
+                    "name": "FilterA",
+                    "thumbnail": "https://statics.teams.cdn.office.net/evergreen-assets/togethermodescenes/SceneB/B_background.png"
+                  }
+                ],
+                "videoAppContentUrl": "https://www.microsoft.com"
+              },
+              "authorization": {
+                "permissions": {
+                  "orgWide": [
+                    {
+                      "name": "MeetingAudio.Toggle",
+                      "type": "Application"
+                    },
+                    {
+                      "name": "Message.Read",
+                      "type": "Delegated"
+                    }
+                  ],
+                  "resourceSpecific": [
+                    {
+                      "name": "Message.Send.Chat",
+                      "type": "Delegated"
+                    },
+                    {
+                      "name": "User.ReadBasic",
+                      "type": "Application"
+                    }
+                  ]
+                }
+              },
+              "configurableProperties": [ "Name", "ShortDescription", "LongDescription", "SmallImageUrl", "LargeImageUrl", "AccentColor", "DeveloperUrl", "PrivacyUrl", "TermsOfUseUrl" ],
+              "defaultBlockUntilAdminAction": true,
+              "publisherDocsUrl": "https://www.microsoft.com/publisher-docs",
+              "graphConnector": {
+                "notificationUrl": "https://www.microsoft.com/graph/notification"
+              },
+              "extensions": [
+                {
+                  "requirements": {
+                    "capabilities": [
+                      {
+                        "name": "text capability name",
+                        "minVersion": "1.0.0",
+                        "maxVersion": "10.0.0"
+                      }
+                    ],
+                    "scopes": [
+                      "mail"
+                    ],
+                    "formFactors": [
+                      "desktop",
+                      "mobile"
+                    ]
+                  },
+                  "runtimes": [
+                    {
+                      "requirements": {
+                        "capabilities": [
+                          {
+                            "name": "Mailbox",
+                            "minVersion": "1.3"
+                          }
+                        ]
+                      },
+                      "id": "TaskPaneRuntime",
+                      "type": "general",
+                      "code": {
+                        "page": "https://localhost:53000/taskpane.html"
+                      },
+                      "lifetime": "short",
+                      "actions": [
+                        {
+                          "id": "TaskPaneRuntimeShow",
+                          "type": "openPage",
+                          "pinnable": false,
+                          "view": "dashboard",
+                          "displayName": "somename",
+                          "multiselect": true,
+                          "supportsNoItemContext": true
+                        }
+                      ]
+                    },
+                    {
+                      "id": "CommandsRuntime",
+                      "type": "general",
+                      "code": {
+                        "page": "https://localhost:53000/commands.html",
+                        "script": "https://localhost:53000/commands.js"
+                      },
+                      "lifetime": "short",
+                      "actions": [
+                        {
+                          "id": "action",
+                          "type": "executeFunction",
+                          "displayName": "action"
+                        }
+                      ]
+                    }
+                  ],
+                  "ribbons": [
+                    {
+                      "contexts": [
+                        "mailRead",
+                        "onlineMeetingDetailsOrganizer",
+                        "logEventMeetingDetailsAttendee"
+                      ],
+                      "tabs": [
+                        {
+                          "builtInTabId": "TabDefault",
+                          "groups": [
+                            {
+                              "id": "msgReadGroup",
+                              "label": "Contoso Add-in",
+                              "icons": [
+                                {
+                                  "size": 16,
+                                  "url": "https://localhost:53000/"
+                                },
+                                {
+                                  "size": 32,
+                                  "url": "https://localhost:53000/"
+                                },
+                                {
+                                  "size": 80,
+                                  "url": "https://localhost:53000/"
+                                }
+                              ],
+                              "controls": [
+                                {
+                                  "id": "msgReadOpenPaneButton",
+                                  "type": "button",
+                                  "label": "Show Taskpane",
+                                  "icons": [
+                                    {
+                                      "size": 16,
+                                      "url": "https://localhost:53000/"
+                                    },
+                                    {
+                                      "size": 32,
+                                      "url": "https://localhost:53000/"
+                                    },
+                                    {
+                                      "size": 80,
+                                      "url": "https://localhost:53000/"
+                                    }
+                                  ],
+                                  "supertip": {
+                                    "title": "Show Taskpane",
+                                    "description": "Opens a pane displaying all available properties."
+                                  },
+                                  "actionId": "TaskPaneRuntimeShow"
+                                },
+                                {
+                                  "id": "ActionButton",
+                                  "type": "button",
+                                  "label": "Perform an action",
+                                  "icons": [
+                                    {
+                                      "size": 16,
+                                      "url": "https://localhost:53000/"
+                                    },
+                                    {
+                                      "size": 32,
+                                      "url": "https://localhost:53000/"
+                                    },
+                                    {
+                                      "size": 80,
+                                      "url": "https://localhost:53000/"
+                                    }
+                                  ],
+                                  "supertip": {
+                                    "title": "Perform an action",
+                                    "description": "Perform an action when clicked."
+                                  },
+                                  "actionId": "action"
+                                }
+                              ]
+                            }
+                          ],
+                          "customMobileRibbonGroup": [
+                            {
+                              "id": "msgReadGroup",
+                              "label": "Contoso Add-in",
+                              "controls": [
+                                {
+                                  "id": "msgReadOpenPaneButton",
+                                  "type": "MobileButton",
+                                  "label": "Show Taskpane",
+                                  "icons": [
+                                    {
+                                      "size": 25,
+                                      "url": "https://localhost:53000/",
+                                      "scale": 1
+                                    },
+                                    {
+                                      "size": 32,
+                                      "url": "https://localhost:53000/",
+                                      "scale": 1
+                                    },
+                                    {
+                                      "size": 48,
+                                      "url": "https://localhost:53000/",
+                                      "scale": 1
+                                    },
+                                    {
+                                      "size": 25,
+                                      "url": "https://localhost:53000/",
+                                      "scale": 1
+                                    },
+                                    {
+                                      "size": 32,
+                                      "url": "https://localhost:53000/",
+                                      "scale": 1
+                                    },
+                                    {
+                                      "size": 48,
+                                      "url": "https://localhost:53000/",
+                                      "scale": 1
+                                    },
+                                    {
+                                      "size": 25,
+                                      "url": "https://localhost:53000/",
+                                      "scale": 1
+                                    },
+                                    {
+                                      "size": 32,
+                                      "url": "https://localhost:53000/",
+                                      "scale": 1
+                                    },
+                                    {
+                                      "size": 48,
+                                      "url": "https://localhost:53000/",
+                                      "scale": 1
+                                    }
+                                  ],
+                                  "actionId": "TaskPaneRuntimeShow"
+                                },
+                                {
+                                  "id": "ActionButton",
+                                  "type": "MobileButton",
+                                  "label": "Perform an action",
+                                  "icons": [
+                                    {
+                                      "size": 25,
+                                      "url": "https://localhost:53000/",
+                                      "scale": 2
+                                    },
+                                    {
+                                      "size": 32,
+                                      "url": "https://localhost:53000/",
+                                      "scale": 2
+                                    },
+                                    {
+                                      "size": 48,
+                                      "url": "https://localhost:53000/",
+                                      "scale": 2
+                                    },
+                                    {
+                                      "size": 25,
+                                      "url": "https://localhost:53000/",
+                                      "scale": 2
+                                    },
+                                    {
+                                      "size": 32,
+                                      "url": "https://localhost:53000/",
+                                      "scale": 2
+                                    },
+                                    {
+                                      "size": 48,
+                                      "url": "https://localhost:53000/",
+                                      "scale": 2
+                                    },
+                                    {
+                                      "size": 25,
+                                      "url": "https://localhost:53000/",
+                                      "scale": 2
+                                    },
+                                    {
+                                      "size": 32,
+                                      "url": "https://localhost:53000/",
+                                      "scale": 2
+                                    },
+                                    {
+                                      "size": 48,
+                                      "url": "https://localhost:53000/",
+                                      "scale": 2
+                                    }
+                                  ],
+                                  "actionId": "action"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "autoRunEvents": [
+                    {
+                      "requirements": {
+                        "capabilities": [
+                          {
+                            "name": "cap auto",
+                            "minVersion": "11.0.0",
+                            "maxVersion": "2.0.0"
+                          }
+                        ],
+                        "scopes": [
+                          "mail"
+                        ],
+                        "formFactors": [
+                          "desktop"
+                        ]
+                      },
+                      "events": [
+                        {
+                          "actionId": "aaa",
+                          "options": {
+                            "sendMode": "block"
+                          },
+                          "type": "appointmentTimeChanged"
+                        }
+                      ]
+                    }
+                  ],
+                  "alternates": [
+                    {
+                      "requirements": {
+                        "capabilities": [
+                          {
+                            "name": "cap alter",
+                            "minVersion": "11.0.0",
+                            "maxVersion": "2.0.0"
+                          }
+                        ],
+                        "scopes": [
+                          "mail"
+                        ],
+                        "formFactors": [
+                          "desktop"
+                        ]
+                      },
+                      "hide": {
+                        "customOfficeAddin": { "officeAddinId": "aaa" },
+                        "storeOfficeAddin": {
+                          "assetId": "bbb",
+                          "officeAddinId": "111"
+                        }
+                      },
+                      "prefer": {
+                        "comAddin": { "progId": "pid" },
+                        "xllCustomFunctions": { "fileName": "filenamedfadf" }
+                      },
+                      "alternateIcons": {
+                        "iconUrl": {
+                          "size": 80,
+                          "url": "https://localhost:53000/"
+                        },
+                        "highResolutionIconUrl": {
+                          "size": 80,
+                          "url": "https://localhost:53000/"
+                        }
+                      }
+                    }
+                  ],
+                  "audienceClaimUrl": "https://auurl"
+                }
+              ]
+            },
+            {
                 "manifestVersion": "1.12",
                 "id": "c92c289e-ceb4-4755-819d-0d1dffdab6fa",
                 "version": "1.0.9",
