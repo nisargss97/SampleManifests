@@ -526,11 +526,11 @@
                         "xllCustomFunctions": { "fileName": "filenamedfadf" }
                       },
                       "alternateIcons": {
-                        "iconUrl": {
+                        "icon": {
                           "size": 80,
                           "url": "https://localhost:53000/"
                         },
-                        "highResolutionIconUrl": {
+                        "highResolutionIcon": {
                           "size": 80,
                           "url": "https://localhost:53000/"
                         }
