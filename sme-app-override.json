@@ -203,7 +203,7 @@
                 }
               },
               "configurableProperties": [ "Name", "ShortDescription", "LongDescription", "SmallImageUrl", "LargeImageUrl", "AccentColor", "DeveloperUrl", "PrivacyUrl", "TermsOfUseUrl" ],
-              "defaultBlockUntilAdminAction": true,
+              "defaultBlockUntilAdminAction": false,
               "publisherDocsUrl": "https://www.microsoft.com/publisher-docs",
               "graphConnector": {
                 "notificationUrl": "https://www.microsoft.com/graph/notification"
