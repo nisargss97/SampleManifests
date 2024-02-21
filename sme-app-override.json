@@ -7,6 +7,12 @@
               "developerUrl": "https://www.microsoft.com",
               "termsOfUseUrl": "https://www.microsoft.com",
               "privacyUrl": "https://www.microsoft.com",
+                "contactInfo": {
+                    "defaultSupport": {
+                      "userEmailsForChatSupport": ["email1@domain.com"],
+                      "emailsForEmailSupport": ["email2@domain.com"]
+                    }
+                  },
               "version": "1.5",
               "manifestVersion": "1.5",
               "scope": "Personal",
