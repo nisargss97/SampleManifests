@@ -1,0 +1,30 @@
+{
+    "value": {
+        "appCatalogMetadata": {
+            "copilotPluginAllowedAppIds": [
+                "aa183fd9-7104-46c4-af9f-9ee9b81d717e",
+                "c738b607-88dd-4f16-aefe-6a824c65d25d",
+                "30bb610c-6321-40fe-a047-056e7d0dac96",
+                "49e6f432-d79c-49e8-94f7-89b94f3672fd",
+                "5be2b320-a5b7-4221-893c-dee506e4e365",
+                "3ee373aa-62fa-4fc6-b11f-9627d5b4a73d",
+                "2b248bdc-b79d-35eb-ece8-e81c1ba9fcef",
+                "fbd624a5-8d34-495d-a68c-a1101997a8a2",
+                "553f93cd-a182-4243-81ac-ccee505a9121",
+                "55ac82fa-249e-43b5-a5a6-4967990764eb",
+                "4b00bbbb-d524-419c-bb3b-9f42aee17424",
+                "05e1f66f-fcad-45c0-8a22-f3b658d375e6",
+                "2b876f4d-2e6b-4ee7-9b09-8893808c1380",
+                "c92c289e-ceb4-4755-819d-0d1dffdab6fa",
+                "40906836-4323-4bbe-875e-3cbb134c40a2"
+            ],
+            "federationBlockedAppIds": [
+                "99e46335-5250-4a68-8499-3e4f55e6f3f6",
+                "0e3bedea-4720-48b5-9e13-5a1ce1387d45",
+                "1542629c-01b3-4a6d-8f76-1938b779e48d",
+                "d832a33f-28c2-4969-8ad0-4fee681dc5b4",
+                "7c316234-ded0-4f95-8a83-8453d0876592"
+            ]
+        }
+    }
+}
