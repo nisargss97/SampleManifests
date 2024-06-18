@@ -1521,6 +1521,102 @@
                     "id": "228f3e22-92b5-4c6d-91e8-9dcc1757ad36",
                     "resource": "api://teams.polly.ai/228f3e22-92b5-4c6d-91e8-9dcc1757ad36"
                 }
+            },
+            {
+                "manifestVersion": "1.16",
+                "version": "1.0.3",
+                "developerName": "Thomson Reuters Incorporated",
+                "developerUrl": "https://www.thomsonreuters.com/",
+                "privacyUrl": "https://www.thomsonreuters.com/en/privacy-statement.html",
+                "termsOfUseUrl": "https://legal.thomsonreuters.com/content/dam/ewp-m/documents/legal/en/pdf/terms-and-agreements/commercial-agreements/highq-ms-teams-terms-of-use.pdf",
+                "validDomains": [
+                    "*.m365.cocounsel.thomsonreuters.com",
+                    "token.botframework.com"
+                ],
+                "inputExtensions": [
+                    {
+                        "botId": "19f99513-758f-4aed-9f80-32e64b4a8a46",
+                        "canUpdateConfiguration": false,
+                        "scopes": [
+                            "Team",
+                            "Personal"
+                        ],
+                        "commands": [
+                            {
+                                "id": "FindClauseCommand",
+                                "context": [
+                                    "Compose",
+                                    "Commandbox"
+                                ],
+                                "parameters": [
+                                    {
+                                        "name": "FindInput",
+                                        "title": "Find input",
+                                        "description": "Search for contractual clause language from Practical Law, publicly available SEC agreements, & your contract repository"
+                                    },
+                                    {
+                                        "name": "AgreementTypeId",
+                                        "inputType": "Choiceset",
+                                        "title": "Agreement Type",
+                                        "description": "Select the agreement type to refine the results to clauses applicable to the contract type you’re working on",
+                                        "choices": [
+                                            {
+                                                "title": "Asset Purchase",
+                                                "value": "APA"
+                                            },
+                                            {
+                                                "title": "Distribution",
+                                                "value": "DIS"
+                                            },
+                                            {
+                                                "title": "Executive Employment",
+                                                "value": "EXE"
+                                            },
+                                            {
+                                                "title": "Syndicated Loan",
+                                                "value": "LA"
+                                            },
+                                            {
+                                                "title": "Manufacturing",
+                                                "value": "MAN"
+                                            },
+                                            {
+                                                "title": "Patent/Know-How License",
+                                                "value": "PKH"
+                                            },
+                                            {
+                                                "title": "Public Merger",
+                                                "value": "PMA"
+                                            },
+                                            {
+                                                "title": "Commercial Lease",
+                                                "value": "RCL"
+                                            },
+                                            {
+                                                "title": "Services",
+                                                "value": "SA"
+                                            },
+                                            {
+                                                "title": "Software License",
+                                                "value": "SLA"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "title": "Find Clause",
+                                "description": "Find information about a legal clause"
+                            }
+                        ],
+                        "type": "botBased"
+                    }
+                ],
+                "defaultInstallScope": "Personal",
+                "shortDescription": "Find Legal Clause.",
+                "longDescription": "Find Legal Clause.",
+                "accentColor": "#FFFFFF",
+                "id": "5a0fd958-ae20-412e-9e7a-8b2d2c7c9a45",
+                "name": "CoCounsel",
+                "smallImageUrl": "https://statics.teams.cdn.office.net/evergreen-assets/ThirdPartyApps/1542629c-01b3-4a6d-8f76-1938b779e48d_smallImage.png?v=2.0.6"
             }
         ]
     }
